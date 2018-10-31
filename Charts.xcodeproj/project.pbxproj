@@ -103,6 +103,8 @@
 		98E2EEF45E8933E4AD182D58 /* ChartViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EFAD7920F76360ADB3B5F5 /* ChartViewBase.swift */; };
 		9A26C8DB1F87B01700367599 /* DataApproximator+N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A26C8DA1F87B01700367599 /* DataApproximator+N.swift */; };
 		9C91C151608E2D6E19B1EAD1 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F099502DA50C56204E7B744 /* Range.swift */; };
+		9DE30FD821899A6100A9648F /* MBLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE30FD621899A6100A9648F /* MBLineChartView.swift */; };
+		9DE30FD921899A6100A9648F /* MBLineChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE30FD721899A6100A9648F /* MBLineChartRenderer.swift */; };
 		9F760570BCECB0BF5727AF90 /* BarLineChartViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C6D3723C4E001B119CA0C8 /* BarLineChartViewBase.swift */; };
 		A40ACF0CCE96EEE104B0463D /* IValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA8AA30C377D54D22A577A /* IValueFormatter.swift */; };
 		A692D8BDE42717F69DB790BE /* HorizontalBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6021C9E424C36116AEA78CC9 /* HorizontalBarChartView.swift */; };
@@ -264,6 +266,8 @@
 		9A26C8DA1F87B01700367599 /* DataApproximator+N.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataApproximator+N.swift"; path = "Source/Charts/Filters/DataApproximator+N.swift"; sourceTree = "<group>"; };
 		9D7184C8A5A60A3522AB9B05 /* BarChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarChartDataProvider.swift; path = Source/Charts/Interfaces/BarChartDataProvider.swift; sourceTree = "<group>"; };
 		9DCD13D558BA177D5952AD66 /* PieChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartView.swift; path = Source/Charts/Charts/PieChartView.swift; sourceTree = "<group>"; };
+		9DE30FD621899A6100A9648F /* MBLineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBLineChartView.swift; sourceTree = "<group>"; };
+		9DE30FD721899A6100A9648F /* MBLineChartRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBLineChartRenderer.swift; sourceTree = "<group>"; };
 		9E7C673B9ED4340F550A9283 /* LegendEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegendEntry.swift; path = Source/Charts/Components/LegendEntry.swift; sourceTree = "<group>"; };
 		A140F644332704916947B58C /* CombinedChartDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedChartDataProvider.swift; path = Source/Charts/Interfaces/CombinedChartDataProvider.swift; sourceTree = "<group>"; };
 		A4FB5E3761EF8B4D1E1E1014 /* PieChartDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieChartDataSet.swift; path = Source/Charts/Data/Implementations/Standard/PieChartDataSet.swift; sourceTree = "<group>"; };
@@ -385,6 +389,7 @@
 				8C531E3F3C3DE5843C93C3DA /* Charts */,
 				51EF1986C9884C25EED1C2CB /* Components */,
 				098621EDFBF928494B94BEA1 /* Data */,
+				9DE30FD421899A6100A9648F /* Extension */,
 				AA79AB82B0ADCA926510B73E /* Filters */,
 				74A391010038924F637D6752 /* Formatters */,
 				42824E1F334B0C484AF4C594 /* Highlight */,
@@ -531,6 +536,24 @@
 				064989451F5C99C7006E8BB3 /* Snapshot.swift */,
 			);
 			name = Charts;
+			sourceTree = "<group>";
+		};
+		9DE30FD421899A6100A9648F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9DE30FD521899A6100A9648F /* MBLineChart */,
+			);
+			name = Extension;
+			path = Source/Charts/Extension;
+			sourceTree = "<group>";
+		};
+		9DE30FD521899A6100A9648F /* MBLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				9DE30FD621899A6100A9648F /* MBLineChartView.swift */,
+				9DE30FD721899A6100A9648F /* MBLineChartRenderer.swift */,
+			);
+			path = MBLineChart;
 			sourceTree = "<group>";
 		};
 		A49C1F0F9CCD6E5C143C29F4 /* Animation */ = {
@@ -871,6 +894,7 @@
 				0C52C70C6E6EA09BD7426386 /* RadarChartData.swift in Sources */,
 				C2EFB4EC8C97FA9987F1B50D /* RadarChartDataEntry.swift in Sources */,
 				E3B28EA1E21279DF3889BCE8 /* RadarChartDataSet.swift in Sources */,
+				9DE30FD921899A6100A9648F /* MBLineChartRenderer.swift in Sources */,
 				9A26C8DB1F87B01700367599 /* DataApproximator+N.swift in Sources */,
 				2B791E64E7C4523B1A63F72A /* ScatterChartData.swift in Sources */,
 				EB56849433A76B08606B73EB /* ScatterChartDataSet.swift in Sources */,
@@ -909,6 +933,7 @@
 				30DCC4BAA5601B154ABADA13 /* CandleChartDataProvider.swift in Sources */,
 				FD37AAC0270F390FFC470A65 /* ChartDataProvider.swift in Sources */,
 				65EA404AE098EBCE8D5DE04B /* CombinedChartDataProvider.swift in Sources */,
+				9DE30FD821899A6100A9648F /* MBLineChartView.swift in Sources */,
 				2BA03CEC36BADCF682F1328B /* LineChartDataProvider.swift in Sources */,
 				0511E43EF3FD2CDE7F7F15DB /* ScatterChartDataProvider.swift in Sources */,
 				7EE6EFE70CF4D8B09CAFCD01 /* AnimatedMoveViewJob.swift in Sources */,
